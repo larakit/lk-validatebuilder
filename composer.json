@@ -1,0 +1,25 @@
+{
+    "name": "larakit/lk-validatebuilder",
+    "version": "1.0.0",
+    "description": "[Larakit] Validate Builder",
+    "keywords": [
+        "laravel 5",
+        "laravel",
+        "larakit"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Berdnikov",
+            "email": "aberdnikov@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Larakit\\": "src/"
+        },
+        "files": [
+            "src/init.php"
+        ]
+    }
+}
