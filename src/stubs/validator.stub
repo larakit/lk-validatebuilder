@@ -1,0 +1,17 @@
+<?php
+namespace DummyNamespace;
+
+use Larakit\ValidateBuilder;
+
+class DummyClass extends ValidateBuilder {
+
+    function build() {
+        $this
+            //############################################################
+            //составляем правила для поля "agree"
+            //############################################################
+            ->to('agree')
+            ->ruleRequired('Для участия на проекте необходимо принять его правила');
+    }
+
+}
