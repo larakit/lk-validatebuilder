@@ -7,6 +7,9 @@
         "laravel 5",
         "larakit"
     ],
+    "require": {
+        "larakit/lk-boot": "*"
+    },    
     "license": "MIT",
     "authors": [
         {
