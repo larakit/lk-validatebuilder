@@ -1225,6 +1225,9 @@ class ValidateBuilder {
      * @throws \Exception
      */
     function ruleRequiredWith($anotherfields, $error_message = null) {
+        if(is_array($anotherfields)) {
+            $anotherfields = implode(',', $anotherfields);
+        }
         return $this->_rule('required_with:' . $anotherfields, $error_message);
     }
     
