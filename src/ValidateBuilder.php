@@ -143,6 +143,10 @@ class ValidateBuilder {
         return $this->_rule('accepted', $error_message);
     }
     
+    function ruleNullable() {
+        return $this->_rule('nullable');
+    }
+    
     /**
      * @param      $rule
      * @param null $error_message
@@ -1228,6 +1232,7 @@ class ValidateBuilder {
         if(is_array($anotherfields)) {
             $anotherfields = implode(',', $anotherfields);
         }
+        
         return $this->_rule('required_with:' . $anotherfields, $error_message);
     }
     
