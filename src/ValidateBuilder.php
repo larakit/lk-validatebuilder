@@ -1040,7 +1040,7 @@ class ValidateBuilder {
      */
     function ruleMin($min, $error_message = null) {
         if(!is_numeric($min)) {
-            throw new \Exception('Incorrect parameter MIN in rule max');
+            throw new \Exception('Incorrect parameter MIN in rule min');
         }
         
         return $this->_rule('min:' . $min, $error_message);
