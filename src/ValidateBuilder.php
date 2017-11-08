@@ -39,8 +39,18 @@ class ValidateBuilder {
         $this->build();
     }
     
+    /**
+     * @param $v \Illuminate\Validation\Validator
+     *
+     * @return \Illuminate\Validation\Validator
+     */
+    protected function after(\Illuminate\Validation\Validator $v) {
+        return $v;
+    }
+    
     function validate($data, $as_html = true) {
         $v = \Validator::make($data, $this->rules(), $this->messages());
+        $v = $this->after($v);
         if(!$v->fails()) {
             return false;
         }
@@ -145,6 +155,10 @@ class ValidateBuilder {
     
     function ruleNullable() {
         return $this->_rule('nullable');
+    }
+    
+    function ruleSometimes() {
+        return $this->_rule('sometimes');
     }
     
     /**
